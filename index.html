@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+      .valid-feedback{
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;">
+</iframe>
+
+<!-- onload="if (submitted) {window.location='/send_mail/contact.html';}"  -->
+
+  
+  <div class="container my-5 py-5 z-depth-1">
+
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+  
+  
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+  
+        <!--Grid column-->
+        <div class="col-md-6">
+  
+          <!-- Default form contact -->
+          <form class="needs-validation" novalidate id="myform"  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLrKHN62GTb8vk82jYaD_ITc8JioeZG80VbR5x5OSB0ib4LA/formResponse" 
+          name="myForm" onsubmit="submitted=true" 
+           class="text-center"  method="POST" target="hidden_iframe">
+  
+           <h3 class="font-weight-bold mb-4">Contact Us</h3>
+  
+
+
+            <!-- Name -->
+            <div >
+            <input  type="text" name="entry.957765860" id="defaultContactFormName" class="form-control mb-4" placeholder="Name" required>
+            <!-- <div class="valid-feedback">
+              Looks good!
+            </div> -->
+          </div>
+
+            <!-- Email -->
+            <div>
+            <input   type="email" name="entry.562624295" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail"  required>
+            <!-- <div class="valid-feedback">
+              Looks good!
+            </div> -->
+          </div>
+           
+  
+            <!-- Message -->
+            <div class="form-group">
+              <textarea  class="form-control rounded-0" name="entry.569880432" id="exampleFormControlTextarea2" rows="3"
+                placeholder="Message"  required></textarea>
+                
+            </div>
+  
+            
+  
+            <!-- Send button -->
+            <button class="btn btn-info btn-block" type="submit">Send</button>
+  
+          </form>
+          <!-- Default form contact -->
+  
+        </div>
+        <!--Grid column-->
+  
+      </div>
+      <!--Grid row-->
+  
+  
+    </section>
+    <!--Section: Content-->
+  
+  
+  </div>
+
+
+
+  <!-- <a href="https://www.yossipo.com/" type="button"> -->
+    <!-- Central Modal Medium Info -->
+    <div   class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    
+      aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+  
+       
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <p class="heading lead">submitted successfully</p>
+   
+            <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+            
+              <span aria-hidden="true" class="white-text">&times;</span>
+             
+            </button>
+          </div>
+   
+          <!--Body-->
+          <div class="modal-body">
+            <div class="text-center">
+              <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+              <h2 style="font-weight: bold; color:#33b5e5;" >Thank You!</h2>
+            </div>
+          </div>
+   
+          <!--Footer-->
+          <div class="modal-footer justify-content-center">
+            <a href="https://www.yossipo.com/" type="button" class="btn btn-primary">To my site<i class="far fa-gem ml-1 text-white"></i></a>
+           
+          </div>
+        </div>
+  
+      
+        <!--/.Content-->
+      </div>
+    </div>
+    <!-- Central Modal Medium Info-->
+  <!-- </a> -->
+
+
+
+
+  
+  
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  
+    <script>
+
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+    </script>
+
+<script type="text/javascript">
+    $(window).on('submit',function(){
+        $('#centralModalInfo').modal('show');
+    });
+</script>
+
+ 
+</body>
+</html>
